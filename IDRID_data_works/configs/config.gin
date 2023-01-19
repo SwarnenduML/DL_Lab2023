@@ -1,0 +1,87 @@
+
+######
+# Main
+######
+main.model_save_folder = 'C:\Personal\DL_Lab\saved_model'
+#'C:\Personal\DL_Lab\saved_model'
+#'/home/RUS_CIP/st180170/dl-lab-22w-team14/diabetic_retinopathy/saved_model'
+main.train_models = False # set this true to train the models
+# models should include baseline, inception_v3, resnet_50, efficient
+# None would mean to train the base model
+# all would train all
+main.models = 'all'
+main.tuning = False # set this true for only tuning
+# the models would be taken from either the saved folder or the training would run and then tuning would be done
+main.tuned_model_path = 'C:\\Personal\\DL_Lab\\tuned_saved_model'
+#'/home/RUS_CIP/st180170/dl-lab-22w-team14/diabetic_retinopathy/tuned_saved_model'
+#'C:\\Personal\\DL_Lab\\tuned_saved_model'
+main.threshold = 0.5
+main.grad_cam = True
+main.grad_cam_model = 'all'
+
+
+#---------------
+# Input pipeline
+#---------------
+
+###############
+# DatasetLoader
+###############
+
+DatasetLoader.dataset_name = 'idrid'
+DatasetLoader.dataset_directory = 'C:\Personal\DL_Lab\IDRID_dataset'
+#'C:\Personal\DL_Lab\IDRID_dataset'
+#'/home/data/IDRID_dataset'
+DatasetLoader.output_dataset_directory = 'C:\Personal\DL_Lab\clahe_processed'
+#'C:\Personal\DL_Lab\clahe_processed'
+#'/home/RUS_CIP/st180170/dl-lab-22w-team14/diabetic_retinopathy/clahe_processed'
+DatasetLoader.training_dataset_ratio = 0.9
+DatasetLoader.sample_equal = True # The value can be true or false.
+# This makes the number of samples in each class equal.
+DatasetLoader.batch_size = 64
+DatasetLoader.augment = True # Cab be set to true or false. 
+#This is used when there is a need for augmentation of the data.
+DatasetLoader.equalization = True # can be true or false based on need for CLAHE equalization
+
+#----------
+# Train
+#----------
+
+###############
+# Train
+###############
+
+Trainer.epochs = 100
+Trainer.learning_rate = 1e-5
+Trainer.early_stopping = True
+Trainer.patience = 10
+Trainer.wait = 0
+
+#----------
+# Tuning
+#----------
+
+#########
+# Number of layers
+#########
+
+hyperparameter_tuning.number_of_layers_to_freeze =  {'baseline' : 0, 'inception_v3' : 249, 'resnet_50' : 130 , 'efficient' : 360}
+
+#------------
+# Visualization
+#-------------
+
+# Grad CAM Paramters
+Visualization.image_path = 'C:\\Personal\\DL_Lab\\clahe_processed\\images\\train'
+#'/home/RUS_CIP/st180170/dl-lab-22w-team14/diabetic_retinopathy/clahe_processed/images/train'
+#'C:\\Personal\\DL_Lab\\clahe_processed\\images\\train'
+Visualization.number_of_images = 100
+Visualization.image_save_folder = 'C:/Personal/DL_Lab/Grad_cam'
+#'/home/RUS_CIP/st180170/dl-lab-22w-team14/diabetic_retinopathy/Grad_cam'
+#'C:/Personal/DL_Lab/Grad_cam'
+Visualization.grad_cam_model_source = 'C:/Personal/DL_Lab/tuned_saved_model'
+#'/home/RUS_CIP/st180170/dl-lab-22w-team14/diabetic_retinopathy/tuned_saved_model'
+#'C:/Personal/DL_Lab/saved_model'
+Visualization.layer_name = {'baseline':'conv2d_2', 'inception_v3':'conv2d_7','resnet_50':'conv2_block2_1_conv', 'efficient':'block6l_project_conv'}
+# resnet_50 - conv2_block2_1_conv (better visualization), conv2_block2_3_conv
+

@@ -1,0 +1,109 @@
+Preparing dataset 'idrid'...
+training clahe done
+testing clahe done
+Preparing file loading from C:\Personal\DL_Lab\IDRID_dataset...
+C:\Personal\DL_Lab\IDRID_dataset/labels/test.csv
+  Image name  Retinopathy grade Risk of macular edema
+1  IDRiD_001                  1                     0
+2  IDRiD_002                  1                     1
+3  IDRiD_003                  1                     0
+4  IDRiD_004                  1                     0
+5  IDRiD_005                  1                     1
+Conversion completed
+371
+42
+413
+    Image name  Retinopathy grade Risk of macular edema
+372  IDRiD_372                  1                     2
+373  IDRiD_373                  0                     0
+374  IDRiD_374                  1                     1
+375  IDRiD_375                  1                     1
+376  IDRiD_376                  1                     2
+Positive and negative datasets created
+  Image name  Retinopathy grade Risk of macular edema
+1  IDRiD_001                  1                     2
+2  IDRiD_002                  1                     2
+3  IDRiD_003                  1                     2
+4  IDRiD_004                  1                     2
+5  IDRiD_005                  1                     0
+paths found
+Values known
+make_ds works
+All basic datasets created
+From C:\Personal\DL_Lab\input_pipeline\dataset_loader.py:267: CounterV2 (from tensorflow.python.data.experimental.ops.counter) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.data.Dataset.counter(...)` instead.
+From C:\Personal\DL_Lab\input_pipeline\dataset_loader.py:267: CounterV2 (from tensorflow.python.data.experimental.ops.counter) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.data.Dataset.counter(...)` instead.
+Datasets corresponding to True sampling and augmentation created
+Datasets corresponding to True created
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+Before tuning baseline
+Training results
+Test - loss: 0.69, acc: 0.56, recall: 1.00, precision: 0.56, Time: 6.50
+Test - loss: 0.70, acc: 0.47, recall: 1.00, precision: 0.47, Time: 10.57
+Test - loss: 0.69, acc: 0.61, recall: 1.00, precision: 0.60, Time: 15.26
+Test - loss: 0.69, acc: 0.53, recall: 1.00, precision: 0.53, Time: 20.61
+Test - loss: 0.69, acc: 0.45, recall: 1.00, precision: 0.45, Time: 25.68
+Test - loss: 0.70, acc: 0.41, recall: 1.00, precision: 0.41, Time: 30.17
+Test - loss: 0.69, acc: 0.45, recall: 1.00, precision: 0.45, Time: 35.54
+Test - loss: 0.69, acc: 0.60, recall: 1.00, precision: 0.60, Time: 37.20
+Validation results
+Test - loss: 0.69, acc: 0.60, recall: 1.00, precision: 0.60, Time: 4.56
+Testing results
+Test - loss: 0.68, acc: 0.62, recall: 1.00, precision: 0.62, Time: 9.62
+After tuning only freezing layers
+Training starts
+
+Start of epoch: 0 - Train - loss: 0.69, acc: 0.51, recall: 0.99, precision: 0.51, Val - loss: 0.69, acc: 0.60, recall: 1.00, precision: 0.60, Time: 51.85
+Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+5 out of the last 11 calls to <function Testing_routine.test_step_2 at 0x00000196E300FB80> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+5 out of the last 11 calls to <function Testing_routine.test_step_2 at 0x00000196E300FB80> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+Test - loss: 0.69, acc: 0.63, recall: 1.00, precision: 0.63, Time: 9.05
+Preparing dataset 'idrid'...
+training clahe done
+testing clahe done
+Preparing file loading from C:\Personal\DL_Lab\IDRID_dataset...
+C:\Personal\DL_Lab\IDRID_dataset/labels/test.csv
+  Image name  Retinopathy grade Risk of macular edema
+1  IDRiD_001                  1                     0
+2  IDRiD_002                  1                     1
+3  IDRiD_003                  1                     0
+4  IDRiD_004                  1                     0
+5  IDRiD_005                  1                     1
+Conversion completed
+371
+42
+413
+    Image name  Retinopathy grade Risk of macular edema
+372  IDRiD_372                  1                     2
+373  IDRiD_373                  0                     0
+374  IDRiD_374                  1                     1
+375  IDRiD_375                  1                     1
+376  IDRiD_376                  1                     2
+Positive and negative datasets created
+  Image name  Retinopathy grade Risk of macular edema
+1  IDRiD_001                  1                     2
+2  IDRiD_002                  1                     2
+3  IDRiD_003                  1                     2
+4  IDRiD_004                  1                     2
+5  IDRiD_005                  1                     0
+paths found
+Values known
+make_ds works
+All basic datasets created
+Datasets corresponding to True sampling and augmentation created
+Datasets corresponding to True created
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+Before tuning inception_v3
+Training results
+6 out of the last 12 calls to <function Testing_routine.test_step_2 at 0x00000196E3484940> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+6 out of the last 12 calls to <function Testing_routine.test_step_2 at 0x00000196E3484940> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+Test - loss: 0.82, acc: 0.41, recall: 0.08, precision: 0.38, Time: 16.51
+Test - loss: 0.76, acc: 0.48, recall: 0.09, precision: 0.43, Time: 22.14
+Test - loss: 0.77, acc: 0.52, recall: 0.24, precision: 0.62, Time: 28.84
+Test - loss: 0.74, acc: 0.50, recall: 0.14, precision: 0.71, Time: 36.41

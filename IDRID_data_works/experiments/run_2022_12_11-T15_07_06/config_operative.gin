@@ -1,0 +1,24 @@
+# Parameters for DatasetLoader:
+# ==============================================================================
+DatasetLoader.augment = True
+DatasetLoader.batch_size = 64
+DatasetLoader.dataset_directory = 'C:\\Personal\\DL_Lab\\IDRID_dataset'
+DatasetLoader.dataset_name = 'idrid'
+DatasetLoader.equalization = True
+DatasetLoader.output_dataset_directory = 'C:\\Personal\\DL_Lab\\clahe'
+DatasetLoader.sample_equal = True
+DatasetLoader.training_dataset_ratio = 0.9
+
+# Parameters for main:
+# ==============================================================================
+main.train_models = True
+
+# Parameters for Trainer:
+# ==============================================================================
+Trainer.early_stopping = True
+Trainer.epochs = 20
+Trainer.learning_rate = 1e-05
+Trainer.model = 'baseline'
+Trainer.patience = 3
+Trainer.threshold = 0.5
+Trainer.wait = 0

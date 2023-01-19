@@ -1,0 +1,46 @@
+# Parameters for DatasetLoader:
+# ==============================================================================
+DatasetLoader.augment = True
+DatasetLoader.batch_size = 64
+DatasetLoader.dataset_directory = 'C:\\Personal\\DL_Lab\\IDRID_dataset'
+DatasetLoader.dataset_name = 'idrid'
+DatasetLoader.equalization = True
+DatasetLoader.output_dataset_directory = 'C:\\Personal\\DL_Lab\\clahe_processed'
+DatasetLoader.sample_equal = True
+DatasetLoader.training_dataset_ratio = 0.9
+
+# Parameters for hyperparameter_tuning:
+# ==============================================================================
+hyperparameter_tuning.number_of_layers_to_freeze = \
+    {'baseline': 0, 'efficient': 360, 'inception_v3': 249, 'resnet_50': 130}
+
+# Parameters for main:
+# ==============================================================================
+main.grad_cam = True
+main.grad_cam_model = 'resnet_50'
+main.model_save_folder = 'C:\\Personal\\DL_Lab\\saved_model'
+main.models = 'all'
+main.threshold = 0.5
+main.train_models = False
+main.tuned_model_path = 'C:\\Personal\\DL_Lab\\tuned_saved_model'
+main.tuning = False
+
+# Parameters for Trainer:
+# ==============================================================================
+Trainer.early_stopping = True
+Trainer.epochs = 100
+Trainer.learning_rate = 1e-05
+Trainer.patience = 10
+Trainer.wait = 0
+
+# Parameters for Visualization:
+# ==============================================================================
+Visualization.grad_cam_model_source = 'C:/Personal/DL_Lab/saved_model'
+Visualization.image_path = 'C:\\Personal\\DL_Lab\\clahe_processed\\images\\train'
+Visualization.image_save_folder = 'C:/Personal/DL_Lab/Grad_cam'
+Visualization.layer_name = \
+    {'baseline': 'conv2d_2',
+     'efficient': 'top_conv',
+     'inception_v3': 'conv2d_7',
+     'resnet_50': 'conv2_block2_1_conv'}
+Visualization.number_of_images = 1

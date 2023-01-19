@@ -1,0 +1,78 @@
+Preparing dataset 'idrid'...
+training clahe done
+testing clahe done
+Preparing file loading from C:\Personal\DL_Lab\IDRID_dataset...
+C:\Personal\DL_Lab\IDRID_dataset/labels/test.csv
+  Image name  Retinopathy grade Risk of macular edema
+1  IDRiD_001                  1                     0
+2  IDRiD_002                  1                     1
+3  IDRiD_003                  1                     0
+4  IDRiD_004                  1                     0
+5  IDRiD_005                  1                     1
+Conversion completed
+371
+42
+413
+    Image name  Retinopathy grade Risk of macular edema
+372  IDRiD_372                  1                     2
+373  IDRiD_373                  0                     0
+374  IDRiD_374                  1                     1
+375  IDRiD_375                  1                     1
+376  IDRiD_376                  1                     2
+Positive and negative datasets created
+  Image name  Retinopathy grade Risk of macular edema
+1  IDRiD_001                  1                     2
+2  IDRiD_002                  1                     2
+3  IDRiD_003                  1                     2
+4  IDRiD_004                  1                     2
+5  IDRiD_005                  1                     0
+paths found
+Values known
+make_ds works
+All basic datasets created
+From C:\Personal\DL_Lab\input_pipeline\dataset_loader.py:253: CounterV2 (from tensorflow.python.data.experimental.ops.counter) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.data.Dataset.counter(...)` instead.
+From C:\Personal\DL_Lab\input_pipeline\dataset_loader.py:253: CounterV2 (from tensorflow.python.data.experimental.ops.counter) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.data.Dataset.counter(...)` instead.
+Datasets corresponding to True sampling and augmentation created
+Datasets corresponding to True created
+Training starts
+Model to train: baseline
+Training starts
+None
+
+Start of epoch: 0 - Train - loss: 0.70, acc: 0.46, recall: 0.73, precision: 0.48, Val - loss: 0.69, acc: 0.60, recall: 1.00, precision: 0.60, Time: 48.69
+Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+Test - loss: 0.68, acc: 0.61, recall: 1.00, precision: 0.61, Time: 6.47
+Test - loss: 0.68, acc: 0.64, recall: 1.00, precision: 0.64, Time: 8.35
+Training models 'INCEPTION_V3'
+Training starts
+Model to train: inception_v3
+Training starts
+None
+
+Start of epoch: 0 - Train - loss: 0.67, acc: 0.56, recall: 0.17, precision: 0.75, Val - loss: 0.71, acc: 0.45, recall: 0.08, precision: 1.00, Time: 67.07
+Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+Test - loss: 0.77, acc: 0.47, recall: 0.27, precision: 0.73, Time: 12.35
+Test - loss: 0.71, acc: 0.51, recall: 0.22, precision: 0.83, Time: 15.94
+Training models 'RESNET_50'
+Training starts
+Model to train: resnet_50
+Training starts
+None
+5 out of the last 17 calls to <function Trainer.train_step at 0x0000017130B6A280> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+5 out of the last 17 calls to <function Trainer.train_step at 0x0000017130B6A280> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+
+Start of epoch: 0 - Train - loss: 0.75, acc: 0.50, recall: 0.39, precision: 0.50, Val - loss: 0.70, acc: 0.40, recall: 0.00, precision: 0.00, Time: 85.70
+Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+5 out of the last 5 calls to <function Testing_routine.test_step_2 at 0x00000171310EEEE0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+5 out of the last 5 calls to <function Testing_routine.test_step_2 at 0x00000171310EEEE0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+Test - loss: 0.70, acc: 0.39, recall: 0.00, precision: 0.00, Time: 13.90
+6 out of the last 6 calls to <function Testing_routine.test_step_2 at 0x00000171310EEEE0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+6 out of the last 6 calls to <function Testing_routine.test_step_2 at 0x00000171310EEEE0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+Test - loss: 0.70, acc: 0.36, recall: 0.00, precision: 0.00, Time: 18.14

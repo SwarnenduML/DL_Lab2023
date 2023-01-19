@@ -1,0 +1,33 @@
+# Main
+main.model_name = 'BILSTM'
+main.bayesian_opt = True
+
+# Dataset Creation
+dataset_creation.window_size = 250
+dataset_creation.shift = 125
+dataset_creation.drop_rem = True # for dropping of the remainder of information
+dataset_creation.batch_size = 250
+
+# Bayesian Optimization
+# Bounded region of parameter space
+Bayesian_opt.pbounds = {'units': (16, 64), 'dropout_rate': (0.0, 0.4), 'learning_rate': (1e-5, 1e-2)}
+Bayesian_opt.epoch = 1
+Bayesian_opt.patience = 3
+
+
+# Architectures
+Model.units = 64
+Model.dropout_rate = 0.2
+
+# Layers
+
+# Training
+Training_routine.epochs = 10
+Training_routine.patience = 3
+Training_routine.learning_rate = 0.001
+
+# Input pipeline
+DatasetLoader.input_dir = 'C:\Personal\HAPT\HAPT Data Set/RawData/'
+DatasetLoader.output_dir = 'C:\Personal\HAPT\HAPT Data Set/ConcatData/'
+DatasetLoader.train_test_val_dir = 'C:\Personal\HAPT\HAPT Data Set/train_test_val/'
+

@@ -1,0 +1,14 @@
+Preparing dataset 'idrid'...
+training clahe done
+testing clahe done
+Preparing file loading from C:\Personal\DL_Lab\IDRID_dataset...
+From C:\Personal\DL_Lab\input_pipeline\dataset_loader.py:272: CounterV2 (from tensorflow.python.data.experimental.ops.counter) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.data.Dataset.counter(...)` instead.
+From C:\Personal\DL_Lab\input_pipeline\dataset_loader.py:272: CounterV2 (from tensorflow.python.data.experimental.ops.counter) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.data.Dataset.counter(...)` instead.
+Datasets corresponding to True sampling and augmentation created
+Datasets corresponding to True created
+Training starts
+Model to train: <keras.engine.functional.Functional object at 0x000002A5F285F190>

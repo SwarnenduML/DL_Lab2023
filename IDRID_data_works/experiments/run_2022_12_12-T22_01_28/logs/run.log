@@ -1,0 +1,56 @@
+Preparing dataset 'idrid'...
+training clahe done
+testing clahe done
+Preparing file loading from C:\Personal\DL_Lab\IDRID_dataset...
+From C:\Personal\DL_Lab\input_pipeline\dataset_loader.py:272: CounterV2 (from tensorflow.python.data.experimental.ops.counter) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.data.Dataset.counter(...)` instead.
+From C:\Personal\DL_Lab\input_pipeline\dataset_loader.py:272: CounterV2 (from tensorflow.python.data.experimental.ops.counter) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.data.Dataset.counter(...)` instead.
+Datasets corresponding to True sampling and augmentation created
+Datasets corresponding to True created
+Training models 'BASELINE'
+Training starts
+Model to train: baseline
+Training starts
+
+Start of epoch: 1 - Train - loss: 0.70, acc: 0.47, recall: 0.17, precision: 0.42, Val - loss: 0.69, acc: 0.60, recall: 1.00, precision: 0.60, Time: 45.42
+Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+Test - loss: 0.69, acc: 0.62, recall: 1.00, precision: 0.62, Time: 8.05
+Preparing dataset 'idrid'...
+training clahe done
+testing clahe done
+Preparing file loading from C:\Personal\DL_Lab\IDRID_dataset...
+Datasets corresponding to True sampling and augmentation created
+Datasets corresponding to True created
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+Before tuning baseline
+Training results
+Test - loss: 0.69, acc: 0.62, recall: 1.00, precision: 0.62, Time: 6.70
+Test - loss: 0.69, acc: 0.45, recall: 1.00, precision: 0.44, Time: 11.04
+Test - loss: 0.69, acc: 0.45, recall: 0.96, precision: 0.44, Time: 15.70
+Test - loss: 0.69, acc: 0.53, recall: 1.00, precision: 0.52, Time: 20.39
+Test - loss: 0.69, acc: 0.50, recall: 0.97, precision: 0.49, Time: 25.01
+Test - loss: 0.69, acc: 0.62, recall: 1.00, precision: 0.61, Time: 29.89
+Test - loss: 0.69, acc: 0.52, recall: 0.97, precision: 0.52, Time: 34.32
+Test - loss: 0.70, acc: 0.25, recall: 1.00, precision: 0.25, Time: 35.88
+Validation results
+Test - loss: 0.69, acc: 0.60, recall: 1.00, precision: 0.60, Time: 3.79
+Testing results
+5 out of the last 11 calls to <function Testing_routine.test_step_2 at 0x0000028B5D86E0D0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+5 out of the last 11 calls to <function Testing_routine.test_step_2 at 0x0000028B5D86E0D0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+Test - loss: 0.69, acc: 0.62, recall: 1.00, precision: 0.62, Time: 8.85
+After tuning only freezing layers
+Training starts
+
+Start of epoch: 1 - Train - loss: 0.69, acc: 0.51, recall: 0.55, precision: 0.51, Val - loss: 0.69, acc: 0.60, recall: 1.00, precision: 0.60, Time: 50.44
+Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+5 out of the last 11 calls to <function Testing_routine.test_step_2 at 0x0000028B5F977D30> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+5 out of the last 11 calls to <function Testing_routine.test_step_2 at 0x0000028B5F977D30> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+Test - loss: 0.68, acc: 0.62, recall: 1.00, precision: 0.62, Time: 8.60
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.

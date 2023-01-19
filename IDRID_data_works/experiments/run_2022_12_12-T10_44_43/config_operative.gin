@@ -1,0 +1,27 @@
+# Parameters for DatasetLoader:
+# ==============================================================================
+DatasetLoader.augment = True
+DatasetLoader.batch_size = 64
+DatasetLoader.dataset_directory = '/home/data/IDRID_dataset'
+DatasetLoader.dataset_name = 'idrid'
+DatasetLoader.equalization = True
+DatasetLoader.output_dataset_directory = \
+    '/home/RUS_CIP/st180170/dl-lab-22w-team14/diabetic_retinopathy/clahe_processed'
+DatasetLoader.sample_equal = True
+DatasetLoader.training_dataset_ratio = 0.9
+
+# Parameters for main:
+# ==============================================================================
+main.model_save_folder = \
+    '/home/RUS_CIP/st180170/dl-lab-22w-team14/diabetic_retinopathy/saved_model'
+main.models = 'all'
+main.train_models = True
+
+# Parameters for Trainer:
+# ==============================================================================
+Trainer.early_stopping = True
+Trainer.epochs = 100
+Trainer.learning_rate = 1e-05
+Trainer.patience = 10
+Trainer.threshold = 0.5
+Trainer.wait = 0

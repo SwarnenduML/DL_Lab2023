@@ -1,0 +1,161 @@
+Preparing dataset 'idrid'...
+Preparing file loading from C:\Personal\DL_Lab\IDRID_dataset...
+C:\Personal\DL_Lab\IDRID_dataset/labels/test.csv
+  Image name  Retinopathy grade Risk of macular edema
+1  IDRiD_001                  1                     0
+2  IDRiD_002                  1                     1
+3  IDRiD_003                  1                     0
+4  IDRiD_004                  1                     0
+5  IDRiD_005                  1                     1
+Conversion completed
+371
+42
+413
+    Image name  Retinopathy grade Risk of macular edema
+372  IDRiD_372                  1                     2
+373  IDRiD_373                  0                     0
+374  IDRiD_374                  1                     1
+375  IDRiD_375                  1                     1
+376  IDRiD_376                  1                     2
+Positive and negative datasets created
+  Image name  Retinopathy grade Risk of macular edema
+1  IDRiD_001                  1                     2
+2  IDRiD_002                  1                     2
+3  IDRiD_003                  1                     2
+4  IDRiD_004                  1                     2
+5  IDRiD_005                  1                     0
+paths found
+Values known
+[1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 1 1 1 1 1 1 1 1]
+make_ds works
+All basic datasets created
+From c:\Personal\DL_Lab\input_pipeline\dataset_loader.py:213: CounterV2 (from tensorflow.python.data.experimental.ops.counter) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.data.Dataset.counter(...)` instead.
+From c:\Personal\DL_Lab\input_pipeline\dataset_loader.py:213: CounterV2 (from tensorflow.python.data.experimental.ops.counter) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.data.Dataset.counter(...)` instead.
+Datasets corresponding to True sampling and augmentation created
+Datasets corresponding to True created
+tf.Tensor(
+[0 0 1 1 0 1 0 1 0 1 1 1 1 1 1 0 0 1 1 1 0 0 0 0 0 1 1 0 1 1 0 1 1 1 0 0 0
+ 0 1 1 0 0 1 1 0 1 1 1 0 0 0 0 1 0 1 0 0 1 1 1 1 0 0 0], shape=(64,), dtype=int64)
+Training starts
+Training starts
+None
+tf.Tensor(
+[0 1 1 1 1 1 1 1 0 1 0 1 1 0 0 1 1 1 1 1 0 1 1 1 0 0 1 1 1 1 1 1 0 0 0 0 0
+ 0 0 1 0 0 1 0 1 1 0 0 1 0 0 0 1 1 0 1 0 0 1 1 0 1 1 0], shape=(64,), dtype=int64)
+tf.Tensor(
+[1 0 0 0 1 1 1 0 1 0 1 1 1 1 1 0 1 0 0 1 0 0 1 0 1 0 0 1 1 0 0 1 0 0 0 0 1
+ 0 1 0 1 0 0 1 0 0 1 0 1 1 0 0 1 0 0 1 1 0 0 0 1 1 1 1], shape=(64,), dtype=int64)
+tf.Tensor(
+[0 0 0 1 1 1 0 0 0 0 1 0 0 1 0 0 1 1 0 1 0 1 1 1 1 0 1 0 0 0 1 1 1 0 1 0 1
+ 0 1 0 0 1 0 0 1 0 0 0 1 1 1 0 0 0 0 1 1 1 0 1 1 1 0 0], shape=(64,), dtype=int64)
+tf.Tensor(
+[0 1 1 1 1 0 1 0 0 1 1 1 0 0 0 0 0 1 0 0 1 0 1 1 1 1 0 0 0 1 1 0 1 0 1 1 1
+ 0 0 0 0 0 1 1 1 0 0 1 1 1 0 1 1 1 0 1 0 1 0 1 1 0 0 0], shape=(64,), dtype=int64)
+tf.Tensor(
+[1 1 0 1 1 1 1 1 1 1 1 0 1 0 1 0 0 0 1 0 0 0 1 1 1 1 0 1 1 0 0 0 1 0 1 0 1
+ 0 0 1 0 1 0 0 0 0 0 1 1 0 1 0 0 1 0 1 0 1 1 1 1 0 1 1], shape=(64,), dtype=int64)
+tf.Tensor(
+[0 0 1 1 0 0 1 0 0 0 0 1 1 1 0 0 1 1 1 1 1 0 1 0 0 0 1 1 0 1 0 0 1 1 0 1 0
+ 0 0 1 1 1 0 0 1 0 0 1 1 0 0 1 0 0 1 1 1 0 0 1 1 0 0 0], shape=(64,), dtype=int64)
+tf.Tensor(
+[1 0 0 0 0 1 1 1 0 1 0 0 0 1 1 1 1 0 1 0 1 0 0 1 1 1 1 1 0 1 1 1 1 1 0 0 1
+ 1 1 1 1 1 0 0 1 0 1 0 0 1 1 0 0 1 1 0 1 0 0 0 1 1 0 0], shape=(64,), dtype=int64)
+tf.Tensor([1 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0], shape=(20,), dtype=int64)
+Tensor._shape is private, use Tensor.shape instead. Tensor._shape will eventually be removed.
+Tensor._shape is private, use Tensor.shape instead. Tensor._shape will eventually be removed.
+
+Start of epoch: 0 - Train - acc: 0.50, recall: 0.26, precision: 0.50, Val - acc: 0.55, recall: 0.92, precision: 0.57, Time: 83.07
+tf.Tensor(
+[1 0 1 1 0 0 1 0 1 1 0 1 1 0 1 0 0 1 1 0 1 0 0 1 1 1 1 1 1 1 0 1 0 1 1 1 0
+ 1 1 0 0 0 0 0 1 0 1 1 1 0 0 0 1 1 0 0 1 0 1 1 0 0 1 1], shape=(64,), dtype=int64)
+tf.Tensor(
+[0 1 1 1 0 1 0 1 1 0 0 0 0 0 0 1 0 0 0 1 0 1 1 0 1 0 0 1 1 0 0 0 0 0 0 1 1
+ 0 0 0 1 1 0 1 1 1 1 1 1 0 1 1 1 1 0 0 0 0 0 0 0 1 1 0], shape=(64,), dtype=int64)
+tf.Tensor(
+[1 1 0 1 0 0 1 0 1 1 1 1 1 1 1 0 1 1 1 0 0 0 1 0 0 0 1 1 0 1 1 1 1 1 1 0 1
+ 0 1 1 1 1 0 1 0 0 0 1 0 1 0 1 1 0 0 0 0 1 1 1 0 0 1 1], shape=(64,), dtype=int64)
+tf.Tensor(
+[1 0 0 1 0 1 1 0 0 0 1 0 0 0 1 0 1 1 1 0 1 1 1 1 0 0 0 1 0 0 1 1 1 0 0 1 1
+ 0 1 0 0 1 1 1 1 0 0 0 1 1 1 1 0 0 1 0 0 1 0 0 0 1 1 1], shape=(64,), dtype=int64)
+tf.Tensor(
+[1 1 0 0 0 0 1 0 0 0 1 1 0 0 0 0 0 1 1 1 1 0 1 0 1 0 1 1 1 0 1 1 0 1 1 1 0
+ 1 0 0 0 1 1 1 0 0 1 0 1 1 0 1 0 0 1 1 0 1 0 1 1 0 0 0], shape=(64,), dtype=int64)
+tf.Tensor(
+[0 1 1 0 0 0 1 0 0 0 0 0 1 1 0 1 0 0 1 1 1 1 0 0 0 1 1 0 0 0 0 1 1 0 0 1 1
+ 1 0 0 1 0 1 0 0 1 1 0 1 1 0 1 1 1 0 1 1 1 0 1 1 0 1 0], shape=(64,), dtype=int64)
+tf.Tensor(
+[1 0 0 1 0 1 0 1 1 0 0 1 0 1 0 1 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 1 1 1 0 1 0
+ 0 1 1 0 0 0 1 0 0 0 1 1 1 0 0 0 1 1 1 0 0 0 0 1 0 1 0], shape=(64,), dtype=int64)
+tf.Tensor([1 1 1 0 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0], shape=(20,), dtype=int64)
+
+Start of epoch: 1 - Train - acc: 0.62, recall: 0.87, precision: 0.58, Val - acc: 0.57, recall: 0.80, precision: 0.61, Time: 43.52
+tf.Tensor(
+[0 0 0 1 1 1 0 0 1 0 0 1 1 1 1 0 1 1 0 0 1 0 1 1 1 1 0 1 1 1 1 1 1 1 1 1 0
+ 1 0 1 0 1 1 1 1 1 1 1 0 0 1 0 0 0 0 0 0 1 0 1 1 0 1 0], shape=(64,), dtype=int64)
+tf.Tensor(
+[1 1 1 0 0 1 1 1 0 0 1 1 0 0 1 1 1 1 0 1 0 1 0 1 0 0 1 1 1 1 1 1 1 0 1 0 0
+ 0 0 0 0 1 1 0 0 0 0 1 0 0 0 1 1 1 0 1 0 0 1 1 1 0 1 0], shape=(64,), dtype=int64)
+tf.Tensor(
+[0 0 1 1 1 1 0 1 0 0 1 0 0 1 1 1 1 0 0 0 1 1 0 1 0 1 0 0 1 1 1 0 1 1 0 1 0
+ 0 1 1 1 0 0 0 1 0 1 1 1 0 1 1 1 0 0 1 0 0 0 1 0 0 1 1], shape=(64,), dtype=int64)
+tf.Tensor(
+[0 0 0 0 1 1 0 0 0 1 0 0 1 1 0 0 0 0 1 0 1 1 1 1 0 1 1 1 1 1 0 0 0 0 0 0 0
+ 1 1 0 1 1 1 1 1 1 0 1 0 1 1 1 0 0 1 0 1 0 0 1 1 1 0 1], shape=(64,), dtype=int64)
+tf.Tensor(
+[0 1 0 1 0 0 0 0 0 1 0 1 1 0 0 1 0 0 0 1 1 1 0 1 1 0 0 1 1 1 0 0 1 1 1 0 1
+ 1 1 1 1 0 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 1 0 1 1 1 1], shape=(64,), dtype=int64)
+tf.Tensor(
+[1 0 0 1 1 0 1 1 1 0 0 0 0 1 1 1 0 1 0 0 1 0 1 1 0 1 0 1 1 1 0 0 1 0 1 0 0
+ 0 1 1 1 1 1 1 0 1 0 1 1 1 1 0 1 1 0 0 1 1 0 1 0 0 0 0], shape=(64,), dtype=int64)
+tf.Tensor(
+[0 0 1 1 1 0 1 0 1 0 0 0 0 0 1 1 0 1 1 0 1 1 0 1 0 1 1 0 0 0 1 1 0 0 1 1 0
+ 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0], shape=(64,), dtype=int64)
+tf.Tensor([0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0], shape=(20,), dtype=int64)
+
+Start of epoch: 2 - Train - acc: 0.60, recall: 0.81, precision: 0.57, Val - acc: 0.55, recall: 0.80, precision: 0.59, Time: 46.35
+tf.Tensor(
+[1 0 1 0 0 1 0 1 0 1 1 0 0 1 0 1 0 1 1 0 0 0 0 1 1 0 0 0 0 1 1 1 1 1 1 0 1
+ 1 0 0 1 1 0 0 0 0 1 0 1 1 0 0 0 1 1 1 1 0 0 0 0 0 1 0], shape=(64,), dtype=int64)
+tf.Tensor(
+[1 1 0 0 1 1 1 0 1 1 0 0 0 1 1 0 1 1 0 0 1 1 1 1 1 0 0 0 1 1 1 0 0 0 1 1 1
+ 1 0 0 0 0 1 1 0 0 0 0 0 0 1 0 0 0 0 1 0 1 1 0 1 1 1 0], shape=(64,), dtype=int64)
+tf.Tensor(
+[0 0 1 1 0 1 1 0 1 1 1 1 0 1 0 1 0 1 1 1 0 0 1 1 0 0 0 0 0 0 0 1 0 0 0 0 0
+ 0 0 0 1 1 1 1 1 0 1 0 0 1 0 1 0 0 1 1 0 0 0 1 0 0 0 0], shape=(64,), dtype=int64)
+tf.Tensor(
+[0 0 0 0 1 0 0 1 1 0 0 0 1 0 1 1 0 1 0 1 0 0 0 0 0 1 0 0 0 1 0 1 0 1 1 1 0
+ 1 1 1 1 0 0 0 0 0 1 1 1 1 0 1 0 0 0 1 0 1 1 1 0 1 0 0], shape=(64,), dtype=int64)
+tf.Tensor(
+[1 0 1 1 1 0 1 1 0 0 0 0 0 0 0 0 0 1 0 1 0 1 0 1 0 0 1 0 1 1 0 1 1 1 1 0 0
+ 1 1 0 1 0 1 0 0 1 0 0 0 0 0 1 1 0 0 1 1 0 0 1 0 0 1 1], shape=(64,), dtype=int64)
+tf.Tensor(
+[1 0 0 0 1 0 1 0 1 0 1 0 0 1 1 0 0 0 0 0 1 1 1 0 1 0 0 1 1 1 0 1 1 1 1 1 1
+ 1 1 1 0 0 0 1 0 1 1 0 1 1 1 1 1 1 0 0 0 0 1 0 1 1 0 0], shape=(64,), dtype=int64)
+tf.Tensor(
+[1 1 1 1 0 0 0 0 1 0 0 0 1 1 1 1 1 1 0 0 0 0 0 1 1 1 0 1 0 1 1 1 0 0 0 0 1
+ 0 1 0 0 0 1 0 1 1 1 1 0 1 0 1 0 1 1 1 1 0 0 0 0 1 0 1], shape=(64,), dtype=int64)
+tf.Tensor([1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1], shape=(20,), dtype=int64)
+
+Start of epoch: 3 - Train - acc: 0.63, recall: 0.56, precision: 0.66, Val - acc: 0.55, recall: 0.92, precision: 0.57, Time: 43.57
+tf.Tensor(
+[1 1 0 0 1 0 1 1 0 1 1 0 1 1 0 1 1 0 1 0 0 1 0 1 1 1 0 1 0 1 0 1 1 1 1 0 0
+ 0 1 1 0 0 0 1 0 0 1 1 1 0 1 1 1 1 0 0 0 1 0 0 0 0 1 0], shape=(64,), dtype=int64)
+tf.Tensor(
+[1 1 0 0 1 0 1 1 0 1 1 1 1 1 1 1 0 1 0 0 1 0 1 0 0 0 0 1 0 1 1 1 0 0 1 1 0
+ 1 1 1 1 1 0 0 1 1 0 1 1 0 1 0 0 1 0 1 1 0 0 0 0 1 0 0], shape=(64,), dtype=int64)
+tf.Tensor(
+[1 1 0 1 0 0 1 0 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 1 0 0 0 0 1 1 1 0 0 0 1
+ 1 0 1 1 1 1 1 1 0 1 0 0 0 1 1 0 0 0 0 0 0 1 0 1 0 0 0], shape=(64,), dtype=int64)
+tf.Tensor(
+[0 0 1 1 0 1 1 0 1 0 0 0 0 0 0 0 0 0 0 1 1 0 1 1 0 1 0 0 1 1 0 0 0 0 0 1 0
+ 0 1 1 1 1 0 0 1 1 0 0 0 0 0 1 0 0 1 1 1 0 1 1 1 1 0 0], shape=(64,), dtype=int64)

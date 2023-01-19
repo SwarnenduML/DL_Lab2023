@@ -1,0 +1,60 @@
+Preparing dataset 'idrid'...
+training clahe done
+testing clahe done
+Preparing file loading from C:\Personal\DL_Lab\IDRID_dataset...
+C:\Personal\DL_Lab\IDRID_dataset/labels/test.csv
+  Image name  Retinopathy grade Risk of macular edema
+1  IDRiD_001                  1                     0
+2  IDRiD_002                  1                     1
+3  IDRiD_003                  1                     0
+4  IDRiD_004                  1                     0
+5  IDRiD_005                  1                     1
+Conversion completed
+371
+42
+413
+    Image name  Retinopathy grade Risk of macular edema
+372  IDRiD_372                  1                     2
+373  IDRiD_373                  0                     0
+374  IDRiD_374                  1                     1
+375  IDRiD_375                  1                     1
+376  IDRiD_376                  1                     2
+Positive and negative datasets created
+  Image name  Retinopathy grade Risk of macular edema
+1  IDRiD_001                  1                     2
+2  IDRiD_002                  1                     2
+3  IDRiD_003                  1                     2
+4  IDRiD_004                  1                     2
+5  IDRiD_005                  1                     0
+paths found
+Values known
+make_ds works
+All basic datasets created
+From C:\Personal\DL_Lab\input_pipeline\dataset_loader.py:253: CounterV2 (from tensorflow.python.data.experimental.ops.counter) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.data.Dataset.counter(...)` instead.
+From C:\Personal\DL_Lab\input_pipeline\dataset_loader.py:253: CounterV2 (from tensorflow.python.data.experimental.ops.counter) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.data.Dataset.counter(...)` instead.
+Datasets corresponding to True sampling and augmentation created
+Datasets corresponding to True created
+Training starts
+Training starts
+None
+
+Start of epoch: 0 - Train - loss: 0.70, acc: 0.49, recall: 0.85, precision: 0.50, Val - loss: 0.70, acc: 0.40, recall: 0.00, precision: 0.00, Time: 45.65
+
+Start of epoch: 1 - Train - loss: 0.69, acc: 0.57, recall: 0.57, precision: 0.57, Val - loss: 0.68, acc: 0.57, recall: 0.96, precision: 0.59, Time: 44.41
+
+Start of epoch: 2 - Train - loss: 0.70, acc: 0.51, recall: 0.99, precision: 0.51, Val - loss: 0.68, acc: 0.60, recall: 1.00, precision: 0.60, Time: 44.69
+
+Start of epoch: 3 - Train - loss: 0.68, acc: 0.62, recall: 0.77, precision: 0.59, Val - loss: 0.70, acc: 0.40, recall: 0.00, precision: 0.00, Time: 44.56
+
+Start of epoch: 4 - Train - loss: 0.68, acc: 0.61, recall: 0.31, precision: 0.77, Val - loss: 0.69, acc: 0.52, recall: 0.68, precision: 0.59, Time: 44.96
+
+Start of epoch: 5 - Train - loss: 0.66, acc: 0.58, recall: 0.94, precision: 0.55, Val - loss: 0.68, acc: 0.60, recall: 1.00, precision: 0.60, Time: 45.11
+
+Start of epoch: 6 - Train - loss: 0.69, acc: 0.52, recall: 1.00, precision: 0.51, Val - loss: 0.67, acc: 0.57, recall: 0.96, precision: 0.59, Time: 44.69
+Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 3 of 3). These functions will not be directly callable after loading.
