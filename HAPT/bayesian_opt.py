@@ -23,7 +23,7 @@ class Bayesian_opt:
             pbounds = self.pbounds,
             random_state=1,
         )
-        optimizer.maximize(init_points=2, n_iter=2,)
+        optimizer.maximize(init_points=2, n_iter=2)
         logging.info("bayes done")
         #return optimizer_bay
 
@@ -42,11 +42,11 @@ class Bayesian_opt:
             raise ValueError(self.model_name.upper() +" does not exist and cannot be trained")
 #        logging.info(units)
 #        logging.info(dropout_rate)
-        model_gru_train = Training_routine(base_model, self.train_dataset, self.valid_dataset, True, self.epoch, self.patience, learning_rate)
-        model_gru_test = Testing_routine(base_model, self.test_dataset, True)
+        model_train = Training_routine(base_model, self.train_dataset, self.valid_dataset, True, self.epoch, self.patience, learning_rate)
+        model_test = Testing_routine(base_model, self.test_dataset, True)
 
-        model_gru_train.training()
-        acc = model_gru_test.testing()
+        model_train.training()
+        acc = model_test.testing()
 
         return acc
 

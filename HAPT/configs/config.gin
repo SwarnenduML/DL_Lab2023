@@ -1,5 +1,5 @@
 # Main
-main.model_name = 'BILSTM'
+main.model_name = 'LSTM'
 main.bayesian_opt = True
 
 # Dataset Creation
@@ -27,7 +27,7 @@ Training_routine.patience = 3
 Training_routine.learning_rate = 0.001
 
 # Input pipeline
-DatasetLoader.input_dir = 'C:\Personal\HAPT\HAPT Data Set/RawData/'
-DatasetLoader.output_dir = 'C:\Personal\HAPT\HAPT Data Set/ConcatData/'
-DatasetLoader.train_test_val_dir = 'C:\Personal\HAPT\HAPT Data Set/train_test_val/'
+DatasetLoader.input_dir = 'C:\Personal\DL_Lab_git\DL_Lab2023\HAPT\HAPT Data Set/RawData/'
+DatasetLoader.output_dir = 'C:\Personal\DL_Lab_git\DL_Lab2023\HAPT\HAPT Data Set/ConcatData/'
+DatasetLoader.train_test_val_dir = 'C:\Personal\DL_Lab_git\DL_Lab2023\HAPT\HAPT Data Set/train_test_val/'
 
