@@ -1,0 +1,139 @@
+######
+# Main
+###### 
+
+main.TRAIN_MODELS = True                  # set this true to train the models
+
+main.models = 'EFFICIENT'                        # models should include baseline, inception_v3, resnet_50, efficient
+                                           # 'None' would mean to train the base model
+                                           # 'all' would train all
+
+main.FINE_TUNING = True                   # set this true for only fine tuning
+                                           #'C:\\Personal\\DL_Lab\\tuned_saved_model'
+
+main.GRAD_CAM = False                       # set this true to only implementing grad_cam
+main.grad_cam_model = 'all'                # models should include baseline, inception_v3, resnet_50, efficient
+                                           # 'None' would mean to train the base model
+                                           # 'all' would train all
+
+main.HYPERPARAMETER_OPT = True             # set this true to only implementing hyperparameter optimization
+
+main.model_save_folder = '/home/RUS_CIP/st180170/dl-lab-22w-team14/diabetic_retinopathy/saved_model' # dir where trained model will be saved 
+                                                                                                   # 'C:\Personal\DL_Lab\saved_model'
+                                                                                                   # '/home/RUS_CIP/st180170/dl-lab-22w-team14/diabetic_retinopathy/saved_model'
+                                                                                       
+main.fine_tuned_model_path = '/home/RUS_CIP/st180170/dl-lab-22w-team14/diabetic_retinopathy/fine_tuned_saved_model'
+												# dir where finetuned model will be saved
+                                                                                                   # the models would be taken from either the saved folder or the 
+                                                                                                   # training would run and then tuning would be done
+main.runs = 2
+
+###################
+# Input pipeline
+###################
+
+#---------------
+# DatasetLoader
+#---------------
+
+DatasetLoader.dataset_name = 'idrid'
+
+DatasetLoader.TRAINING_DATASET_RATIO = 0.8
+
+DatasetLoader.SAMPLE_EQUAL = False            # the value can be true or false.
+                                             # this makes the number of samples in each class equal.
+
+DatasetLoader.BATCH_SIZE = 32
+
+DatasetLoader.AUGMENT = False                 # can be set to true or false. 
+                                             # this is used when there is a need for augmentation of the data.
+
+DatasetLoader.EQUALIZATION = False            # can be true or false based on need for equalization (CLAHE)
+
+DatasetLoader.dataset_directory = '/home/data/IDRID_dataset'
+                                                                                                        #'C:\Personal\DL_Lab\IDRID_dataset'
+                                                                                                        #'/home/data/IDRID_dataset'
+
+DatasetLoader.output_dataset_directory = '/home/RUS_CIP/st180170/dl-lab-22w-team14/diabetic_retinopathy/clahe_processed'
+                                                                                                        #'C:\Personal\DL_Lab\clahe_processed'
+                                                                                                        #'/home/RUS_CIP/st180170/dl-lab-22w-team14/diabetic_retinopathy/clahe_processed'
+
+
+###############
+# Train and Test
+###############
+Trainer.SAVE_MODEL = True # set to true to save model else no models would be saved
+Trainer.EPOCHS = 100
+Trainer.LEARNING_RATE = 0.001
+Trainer.EARLY_STOPPING = True
+Trainer.PATIENCE = 3
+Trainer.train_val_log_dir_path = '/home/RUS_CIP/st180170/dl-lab-22w-team14/diabetic_retinopathy/logs/'
+										                     # path for storing the trainig and 
+                                                                                                        # validation metric logs
+                                                                                                        # can be used later for tensorboard
+
+# Do not change the below values ---------------------------
+Trainer.hyperparameter_routine = False
+Trainer.optimizer = None
+TestingRoutine.hyperparameter_routine = False
+TestingRoutine.hparams = None
+TestingRoutine.run_dir = None
+# ----------------------------------------------------------
+
+
+
+##########
+# Tuning
+##########
+
+#-----------------
+# Number of layers
+#-----------------
+
+fine_tuning_fn.number_of_layers_to_freeze =  {'baseline' : 0, 'inception_v3' : 249, 'resnet_50' : 130 , 'efficient' : 360}
+
+
+
+###################
+# Visualization
+###################
+
+# Grad CAM Paramters
+
+Visualization.NUMBER_OF_IMAGES= 100                      # No of images for grad cam application
+
+Visualization.IMAGE_SIZE = (256, 256)                   # Default image size
+
+Visualization.image_path = '/home/data/IDRID_dataset/images/train'
+#'/home/RUS_CIP/st180170/dl-lab-22w-team14/diabetic_retinopathy/clahe_processed/images/train'         # path where test images are stored 
+                                                                                                            #'C:\\Personal\\DL_Lab\\clahe_processed\\images\\train'
+
+Visualization.image_save_folder = '/home/RUS_CIP/st180170/dl-lab-22w-team14/diabetic_retinopathy/grad_cam'                     # dir where grad cam results will be stored
+                                                                                                            #'C:/Personal/DL_Lab/Grad_cam'
+
+
+Visualization.grad_cam_model_source_1 = '/home/RUS_CIP/st180170/dl-lab-22w-team14/diabetic_retinopathy/saved_model'            # dir where saved model with fine tuning are stored
+Visualization.grad_cam_model_source_2 = '/home/RUS_CIP/st180170/dl-lab-22w-team14/diabetic_retinopathy/fine_tuned_saved_model' # dir where fine tuned model are stored
+                                                                                                            #'C:/Personal/DL_Lab/saved_model'
+
+
+
+###################
+# Architecture
+###################
+
+# Default Parameters will change them after finding the optimum parameters via Hyperparameter Optimization-----------------------------
+ModelArchitecture.baseline_units = 16
+ModelArchitecture.baseline_dropout_rate = 0.2
+ModelArchitecture.inception_dropout_rate = 0.37                                  
+ModelArchitecture.resnet_dropout_rate = 0.4
+ModelArchitecture.efficient_dropout_rate = 0.37
+#----------------------------------------------------------------------------------------------------------------------------------
+
+
+###############################
+# Hyperparameter Optimization
+###############################
+
+HyperparameterOptimization.model_save_folder = '/home/RUS_CIP/st180170/dl-lab-22w-team14/diabetic_retinopathy/hyperparameter_saved_model'   # dir where hyperparameterized model will be saved
+HyperparameterOptimization.test_log_dir_path = '/home/RUS_CIP/st180170/dl-lab-22w-team14/diabetic_retinopathy/logs/hyperparameter/'         # path for storing the test metric logs

@@ -1,0 +1,43 @@
+# Main
+main.model_name = 'complex_model_1' #LSTM, BILSTM, GRU
+main.bayesian_opt = True
+main.start_time_stamp = 75000
+main.end_time_stamp = 90000
+main.runs = 5
+
+
+# Dataset Creation
+dataset_creation.window_size = 250
+dataset_creation.shift = 125
+dataset_creation.drop_rem = True # for dropping of the remainder of information
+dataset_creation.batch_size = 250
+
+# Bayesian Optimization
+# Bounded region of parameter space
+Bayesian_opt.pbounds = {'units': (16, 256), 'dropout_rate': (0.0, 0.5), 'learning_rate': (1e-5, 1e-1)}
+# Keep epochs and patience as 5 and 3 respectively
+Bayesian_opt.epoch = 100
+Bayesian_opt.patience = 10
+Bayesian_opt.n_iter = 10
+Bayesian_opt.init_points = 10
+
+# Architectures
+Model.units = 64
+Model.dropout_rate = 0.2
+
+# Layers
+
+# Training
+# Can change epochs to 10, 20 whatever you like
+Training_routine.epochs = 100
+Training_routine.patience = 10
+Training_routine.learning_rate = 0.001
+
+# Input pipeline
+DatasetLoader.input_dir = '/home/data/HAPT_dataset/RawData/'
+DatasetLoader.output_dir = '/home/RUS_CIP/st180170/dl-lab-22w-team14/Human_Activity_Recognition/ConcatData/'
+DatasetLoader.train_test_val_dir = '/home/RUS_CIP/st180170/dl-lab-22w-team14/Human_Activity_Recognition/train_test_val/'
+
+# Visualization
+Visualization.output_dir = '/home/RUS_CIP/st180170/dl-lab-22w-team14/Human_Activity_Recognition/visuals'
+GRU
